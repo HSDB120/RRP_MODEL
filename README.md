@@ -1,4 +1,4 @@
-markdown# MS2R1P - Robot Manipulador RRP
+# MS2R1P - Robot Manipulador RRP
 
 Paquete ROS 2 para control y simulación de un manipulador robótico serial con configuración RRP (Revolute-Revolute-Prismatic).
 
