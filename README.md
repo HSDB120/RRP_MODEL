@@ -21,9 +21,9 @@ Este proyecto implementa un sistema completo de control robótico que incluye:
 - ROS 2 Humble
 
 ### Dependencias de Python
-```bash
+bash
 pip3 install ezdxf numpy
-Dependencias de ROS 2
+### Dependencias de ROS 2
 sudo apt install ros-humble-robot-state-publisher \
                  ros-humble-rviz2 \
                  ros-humble-xacro \
