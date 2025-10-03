@@ -24,7 +24,7 @@ Este proyecto implementa un sistema completo de control robótico que incluye:
 ```bash
 pip3 install ezdxf numpy
 Dependencias de ROS 2
-bashsudo apt install ros-humble-robot-state-publisher \
+sudo apt install ros-humble-robot-state-publisher \
                  ros-humble-rviz2 \
                  ros-humble-xacro \
                  python3-numpy
@@ -49,7 +49,7 @@ ms2r1p/
 ├── setup.py
 └── README.md
 Instalación
-bash# Crear workspace
+# Crear workspace
 mkdir -p ~/ros2_ws_2502/src
 cd ~/ros2_ws_2502/src
 
@@ -64,11 +64,11 @@ colcon build --packages-select ms2r1p
 source install/setup.bash
 Uso
 1. Generar DXF de prueba (opcional)
-bashpython3 ~/ros2_ws_2502/src/ms2r1p/ms2r1p/dxfs/create_test_dxf.py
+python3 ~/ros2_ws_2502/src/ms2r1p/ms2r1p/dxfs/create_test_dxf.py
 2. Lanzar el sistema completo
-bashros2 launch ms2r1p display_launch.py
+ros2 launch ms2r1p display_launch.py
 3. Ejecutar el planificador de trayectorias (en otra terminal)
-bashsource ~/ros2_ws_2502/install/setup.bash
+source ~/ros2_ws_2502/install/setup.bash
 ros2 run ms2r1p trajectory_planner_node
 Parámetros Configurables
 Trajectory Planner
@@ -149,10 +149,10 @@ Rango Y: 0m a 0.8m
 Troubleshooting
 Error: "Goal position is out of reach"
 La trayectoria contiene puntos fuera del workspace del robot. Ajusta el DXF añadiendo offset:
-pythonoffset_x = 150  # 1.5m después de escalar
+offset_x = 150  # 1.5m después de escalar
 Robot no se mueve
 Verifica que todos los nodos estén corriendo:
-bashros2 node list
+ros2 node list
 Deberías ver:
 
 /dxf_parser_node_cx
@@ -164,7 +164,7 @@ Deberías ver:
 
 RViz no muestra el robot
 Verifica que el Fixed Frame sea base_link_cx:
-bashRViz → Global Options → Fixed Frame → base_link_cx
+RViz → Global Options → Fixed Frame → base_link_cx
 Archivos CSV Generados
 Durante la ejecución se generan:
 
@@ -174,3 +174,6 @@ planned_trajectory.csv: Trayectoria interpolada completa
 Licencia
 Apache-2.0
 Referencias
+
+ROS 2 Humble Documentation: https://docs.ros.org/en/humble/
+ezdxf Documentation: https://ezdxf.readthedocs.io/
