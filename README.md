@@ -13,7 +13,8 @@ Este proyecto implementa un sistema completo de control robótico que incluye:
 - Cinemática directa e inversa
 - Control de seguimiento de trayectoria
 - Visualización en RViz2
-
+## Video entrega:
+https://youtu.be/NXWL8rJlf1o
 ## Requisitos
 
 ### Sistema
